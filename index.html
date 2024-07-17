@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="page1"class="container">
+        <h1>Raj Photography</h1>
+        <h2>Packages</h2>
+        <div id="checklist">
+
+            <h2>Album:</h2>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item1" data-price="400">
+                <label for="item1">Canvera Album With(CMYK-7Color)Finish(Rs.400)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item2" data-price="450">
+                <label for="item2">Canvera Album With(RGB-11Color)Finish(Rs.450)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item3" data-price="550">
+                <label for="item3">Canvera Album With(RGB(HD)-55Color)Finish(Rs.550)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item4" data-price="650">
+                <label for="item4">Canvera Album With(RGB(HD)-55Color)Warrenty(Rs.650)</label>
+            </div>
+
+            <h2>VIDEO:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item5" data-price="15000">
+                <label for="item5">FULLHD Video 1080x1920(Normal Bitrate)(Rs.15000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item6" data-price="18000">
+                <label for="item6">FULLHD Video 1080x1920(High Bitrate);(Rs.18000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item7" data-price="28000">
+                <label for="item7">4K Video,50 FPS +1TB Drive(Rs.28000)</label>
+            </div>
+
+            <h2>Candid:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item8" data-price="40000">
+                <label for="item8">Photography +(25 nos Canvera-55 color's)(Rs.40000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item9" data-price="20000">
+                <label for="item9">Photography + (Reception & Wedding)(Rs.20000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item10" data-price="25000">
+                <label for="item10">Videography(5min-Trailer-FULL HD)(Rs.25000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item11" data-price="35000">
+                <label for="item11">Videography(5-mins Trailer-4k)(Rs.35000)</label>
+            </div>
+
+            <h2>Mixing Amp:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item12" data-price="20000">
+                <label for="item12">Full HD Video Bluray(Rs.20000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item13" data-price="30000">
+                <label for="item13">4K Video Bluray(Rs.30000)</label>
+            </div>
+
+            <h2>Cran:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item14" data-price="30000">
+                <label for="item14">For Full HD Video(Rs.30000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item15" data-price="40000">
+                <label for="item15">For 4K Video(Rs.40000)</label>
+            </div>
+
+            <h2>TV:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item16" data-price="5000">
+                <label for="item16">42 inch LED 2nos+Transport(Rs.5000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item17" data-price="6000">
+                <label for="item17">50 inch LED 2nos + Transport(Rs.6000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item18" data-price="7000">
+                <label for="item18">55 inch LED 2nos + Transport(Rs.7000)</label>
+            </div>
+
+            <h2>Walled:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item19" data-price="16000">
+                <label for="item19">6x8 feet + Transport extra(Rs.16000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item20" data-price="30000">
+                <label for="item20">12x8 feet + Transport extra (Rs.30000)</label>
+            </div>
+            <h2>Elicam:</h2>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item21" data-price="18000">
+                <label for="item21">Full HD Video 50FPS(Rs.18000)</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" id="item22" data-price="25000">
+                <label for="item22">4K Video 50FPS &nbsp;(Rs.25000)</label>
+            </div>
+        </div>
+        <button onclick="showTotalChecked()">Submit</button>
+        <audio id="check-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+    </div>
+
+    <div id="page2" class="container" style="display: none;">
+        <h1>Selected Items</h1>
+        <div id="selected-items"></div>
+        <p id="total-cost"></p>
+        <button onclick="confirmSelection()">Confirm</button>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
